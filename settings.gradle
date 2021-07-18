@@ -1,0 +1,6 @@
+include ':location'
+include ':locate'
+include ':test2'
+include ':test'
+include ':app'
+rootProject.name = "Platform"

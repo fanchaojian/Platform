@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".location"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        >
+
+        <!--定位信息显示区域-->
+        <TextView
+            android:id="@+id/locateResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textFontWeight="700"
+            android:text="定位信息"
+            android:maxWidth="350dp"
+            />
+
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/refresh"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+    <!--权限展示区域-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:textColor="#000000"
+            android:text="权限管理"
+            />
+        <TextView
+            android:id="@+id/gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/disk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text=""
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="除以上权限外，手机本身省电策略也是影响后台持续定位的关键，请务必设置为无限制。"
+            />
+
+    </LinearLayout>
+
+
+    <!--考勤管理-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:text="考勤管理"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        />
+    <Switch
+        android:id="@+id/hasCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否有车"
+        android:layout_marginLeft="15dp"
+        android:checked="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/startWork"
+            android:onClick="startWork"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="开始工作"
+            android:layout_marginLeft="15dp"
+            android:textSize="14sp"
+            android:background="#5cb85c"
+
+            />
+        <Button
+            android:id="@+id/endWork"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="下班打卡"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textSize="14sp"
+            android:background="#5cb85c"
+
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="每次打卡可打卡多次，可确保打卡准确无误。"
+        />
+
+
+
+</LinearLayout>
